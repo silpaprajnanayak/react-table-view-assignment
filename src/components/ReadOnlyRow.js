@@ -1,20 +1,21 @@
 import React from "react";
+import { Button } from "reactstrap";
 
-const ReadOnlyRow = ({ post, handleEditClick, handleDeleteClick }) => {
+const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
   return (
     <tr>
-      <td>{post.id}</td>
-      <td>{post.title}</td>
+      <td>{contact.id}</td>
+      <td>{contact.title}</td>
       <td>
-        <button
-          type="button"
-          onClick={(event) => handleEditClick(event, post)}
+        <Button
+          type="button" color="success" 
+          onClick={(event) => handleEditClick(event, contact)}
         >
           Edit
-        </button>
-        <button type="button" onClick={() => handleDeleteClick(post.id)}>
+        </Button>
+        <Button type="button" color="danger" onClick={() => handleDeleteClick(contact.id)}>
           Delete
-        </button>
+        </Button>
       </td>
     </tr>
   );

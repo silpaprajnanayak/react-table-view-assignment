@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "reactstrap";
 
 const EditableRow = ({
   editFormData,
@@ -14,24 +15,24 @@ const EditableRow = ({
           placeholder="Enter a id..."
           name="id"
           value={editFormData.id}
-          onChange={handleEditFormChange} readOnly
+          onChange={handleEditFormChange}
         ></input>
       </td>
       <td>
         <input
           type="text"
           required="required"
-          placeholder="Enter a title..."
+          placeholder="Enter an title..."
           name="title"
           value={editFormData.title}
           onChange={handleEditFormChange}
         ></input>
       </td>
       <td>
-        <button type="submit">Save</button>
-        <button type="button" onClick={handleCancelClick}>
+        <Button color="primary" type="submit">Save</Button>
+        <Button color="danger" type="button" onClick={handleCancelClick}>
           Cancel
-        </button>
+        </Button>
       </td>
     </tr>
   );
